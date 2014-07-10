@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D46EF21A-F3B2-4F30-944C-4A2E30AF0570}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fitbit</RootNamespace>
+    <AssemblyName>Fitbit</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\Fitbit\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Fitbit\Models\Activity.cs">
+      <Link>Models\Activity.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\ActivityDistance.cs">
+      <Link>Models\ActivityDistance.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\ActivityGoals.cs">
+      <Link>Models\ActivityGoals.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\ActivityLog.cs">
+      <Link>Models\ActivityLog.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\ActivitySummary.cs">
+      <Link>Models\ActivitySummary.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\ApiError.cs">
+      <Link>Models\ApiError.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\ApiSubscription.cs">
+      <Link>Models\ApiSubscription.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\AuthCredential.cs">
+      <Link>Models\AuthCredential.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\BloodPressure.cs">
+      <Link>Models\BloodPressure.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\BloodPressureAverage.cs">
+      <Link>Models\BloodPressureAverage.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\BloodPressureData.cs">
+      <Link>Models\BloodPressureData.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\Body.cs">
+      <Link>Models\Body.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\BodyGoals.cs">
+      <Link>Models\BodyGoals.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\BodyMeasurements.cs">
+      <Link>Models\BodyMeasurements.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\Device.cs">
+      <Link>Models\Device.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\Enums\APICollectionType.cs">
+      <Link>Models\Enums\APICollectionType.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\Enums\DateRangePeriod.cs">
+      <Link>Models\Enums\DateRangePeriod.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\Enums\DeviceType.cs">
+      <Link>Models\Enums\DeviceType.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\Enums\ErrorType.cs">
+      <Link>Models\Enums\ErrorType.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\Enums\IntradayResourceType.cs">
+      <Link>Models\Enums\IntradayResourceType.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\Enums\ResourceOwnerType.cs">
+      <Link>Models\Enums\ResourceOwnerType.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\Enums\TimeSeriesResourceType.cs">
+      <Link>Models\Enums\TimeSeriesResourceType.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\Fat.cs">
+      <Link>Models\Fat.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\FatLog.cs">
+      <Link>Models\FatLog.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\Food.cs">
+      <Link>Models\Food.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\FoodGoals.cs">
+      <Link>Models\FoodGoals.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\FoodLog.cs">
+      <Link>Models\FoodLog.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\FoodLogUnit.cs">
+      <Link>Models\FoodLogUnit.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\FoodSummary.cs">
+      <Link>Models\FoodSummary.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\Friend.cs">
+      <Link>Models\Friend.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\HeartRateLog.cs">
+      <Link>Models\HeartRateLog.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\HeartRates.cs">
+      <Link>Models\HeartRates.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\HeartRateSummary.cs">
+      <Link>Models\HeartRateSummary.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\IntradayData.cs">
+      <Link>Models\IntradayData.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\LoggedFood.cs">
+      <Link>Models\LoggedFood.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\MinuteData.cs">
+      <Link>Models\MinuteData.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\NutritionalValues.cs">
+      <Link>Models\NutritionalValues.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\RequestToken.cs">
+      <Link>Models\RequestToken.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\Sleep.cs">
+      <Link>Models\Sleep.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\SleepData.cs">
+      <Link>Models\SleepData.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\SleepLog.cs">
+      <Link>Models\SleepLog.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\SleepSummary.cs">
+      <Link>Models\SleepSummary.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\SubscriptionResponse.cs">
+      <Link>Models\SubscriptionResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\TimeSeriesDataList.cs">
+      <Link>Models\TimeSeriesDataList.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\TimeSeriesDataListInt.cs">
+      <Link>Models\TimeSeriesDataListInt.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\TrackerAlarm.cs">
+      <Link>Models\TrackerAlarm.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\UpdatedResource.cs">
+      <Link>Models\UpdatedResource.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\Updates.cs">
+      <Link>Models\Updates.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\User.cs">
+      <Link>Models\User.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\UserProfile.cs">
+      <Link>Models\UserProfile.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\Weight.cs">
+      <Link>Models\Weight.cs</Link>
+    </Compile>
+    <Compile Include="..\Fitbit\Models\WeightLog.cs">
+      <Link>Models\WeightLog.cs</Link>
+    </Compile>
+    <Compile Include="Authenticator.cs" />
+    <Compile Include="FitbitClient.cs" />
+    <Compile Include="Helpers\StringEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AsyncOAuth">
+      <HintPath>..\Fitbit\packages\AsyncOAuth.0.8.4\lib\AsyncOAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="bouncy-castle-hmac-sha1-pcl">
+      <HintPath>..\Fitbit\packages\BouncyCastle-PCL.1.0.0.3\lib\bouncy-castle-hmac-sha1-pcl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\Fitbit\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wp8+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\Fitbit\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wp8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\Fitbit\packages\Microsoft.Net.Http.2.2.22\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\Fitbit\packages\Microsoft.Net.Http.2.2.22\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\Fitbit\packages\Microsoft.Net.Http.2.2.22\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RestSharp-portable\RestSharp.Portable\RestSharp.Portable.csproj">
+      <Project>{ba2352e1-cb07-4795-a2eb-f70720b2bbc9}</Project>
+      <Name>RestSharp.Portable</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <Import Project="..\Fitbit\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\Fitbit\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\Fitbit\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\Fitbit\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
