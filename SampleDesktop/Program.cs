@@ -15,7 +15,7 @@ namespace SampleDesktop
     {
         const string consumerKey = "YOUR_CONSUMER_KEY_HERE";
         const string consumerSecret = "YOUR_CONSUMER_SECRET_HERE";
-        
+
         static void Main(string[] args)
         {
             //Example of getting the Auth credentials for the first time by directoring the
@@ -32,7 +32,30 @@ namespace SampleDesktop
             var fitbit = new FitbitClient(consumerKey, consumerSecret, credentials.AuthToken, credentials.AuthTokenSecret);
            
             var profile = fitbit.GetUserProfile();
-            Console.WriteLine("Your last weight was {0}", profile.Weight);
+            Console.WriteLine(" Your profile name            : {0}", profile.DisplayName);
+
+            // Sample to show how to retrieve data for a time range. 
+            // Assumes a 'Challenge' of a million steps required in a little more 260 days.
+
+            DateTime startDate = new DateTime(2014, 11, 11);
+            DateTime endDate = new DateTime(2015, 07, 31);
+            double challengeSteps = 1000000;
+
+            double numDays = (DateTime.UtcNow - startDate).TotalDays;
+            double numChallengeDays = (endDate - startDate).TotalDays;
+            var timeSeriesData = fitbit.GetTimeSeries(TimeSeriesResourceType.Steps, startDate, endDate);
+            int totalSteps = 0;
+            foreach (var dataItem in timeSeriesData.DataList)
+            {
+                totalSteps += Int32.Parse(dataItem.Value);
+            }
+
+            Console.WriteLine(" Total steps since challenge  : {0:n0}", totalSteps);
+            Console.WriteLine(" Percentage time completed    : {0:n2}/{1} = {2:n2}%", numDays, numChallengeDays, numDays / numChallengeDays * 100);
+            Console.WriteLine(" Percentage towards goal      : {0:n2}%", totalSteps / challengeSteps * 100.00);
+            Console.WriteLine(" Initial required steps/day   : {0:n0}", challengeSteps / numChallengeDays);
+            Console.WriteLine(" Current steps/day            : {0:n0}", totalSteps / numDays);
+            Console.WriteLine(" Remaining required steps/day : {0:n0}", (challengeSteps - totalSteps) / (numChallengeDays - numDays));
 
             Console.ReadLine();
         }
